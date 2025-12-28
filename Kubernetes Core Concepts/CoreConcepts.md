@@ -157,7 +157,9 @@ Kubernetes supports both **YAML** and **JSON** for configuration.
 
 # Kubernetes Architecture
 
-![Kubernetes Architecture](Images/k8s-archi.png)
+## Architecture Diagram
+
+![Kubernetes Architecture](../Images/k8s-archi.png)
 
 Kubernetes follows a **client-server architecture** with Master (Control Plane) and Worker Nodes forming a Kubernetes Cluster. Multiple master and worker nodes can be added based on requirements.
 
