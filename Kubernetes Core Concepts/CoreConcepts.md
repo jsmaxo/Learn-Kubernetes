@@ -152,7 +152,65 @@ Kubernetes supports both **YAML** and **JSON** for configuration.
 - Apache Mesos  
 - OpenShift  
 - Nomad  
-- And more  
+- And more
+
+
+# Kubernetes Architecture
+
+![Kubernetes Architecture](Images/k8s-archi.png)
+
+Kubernetes follows a **client-server architecture** with Master (Control Plane) and Worker Nodes forming a Kubernetes Cluster. Multiple master and worker nodes can be added based on requirements.
+
+### Control Plane
+The control plane components—API Server, etcd, Scheduler, and Controller Manager—reside on the master node(s) and manage the cluster.
+
+### Master Node
+The Master Node controls the entire cluster and communicates with worker nodes. Its main components are:
+
+1. **API Server:** Entry point for all Kubernetes commands (e.g., kubectl). It forwards requests to components that create or manage pods.  
+2. **etcd:** Key-value database storing cluster state, including pod IPs, nodes, and configurations.  
+3. **Controller Manager:** Monitors cluster state and sends instructions to maintain the desired state.  
+4. **Scheduler:** Assigns workloads to worker nodes based on resources and requirements.  
+
+**Real-world analogy:**  
+In a food delivery company:  
+- API Server = customer service desk  
+- etcd = central database  
+- Scheduler = dispatch manager  
+- Controller Manager = operations manager  
+
+### Worker Node
+The Worker Node executes containers and communicates with the Master Node. Its main components are:
+
+1. **Kubelet:** Monitors pods, replaces failed ones, and communicates with the API Server.  
+2. **Kube-proxy:** Manages network traffic and load balancing based on cluster configuration.  
+3. **Pods:** Smallest deployable units containing one or more containers.  
+4. **Container Engine:** Provides runtime environment for containers (e.g., Docker, containerd).  
+
+**Real-world analogy:**  
+Worker nodes are like delivery riders: kubelet is the supervisor, the container engine is the vehicle, and kube-proxy ensures proper routing.
+
+---
+
+## Features of Kubernetes
+- **Autoscaling:** Horizontal & vertical scaling reduces downtime.  
+- **Auto Healing:** Automatically repairs and restarts failed containers.  
+- **Load Balancing:** Distributes traffic efficiently.  
+- **Platform Independent:** Works on any infrastructure (on-prem, VM, cloud).  
+- **Fault Tolerance:** Detects failures and redeploys pods.  
+- **Rollback:** Revert to previous versions if needed.  
+- **Health Monitoring:** Regularly checks pod health.  
+- **Orchestration:** Manages containers across different networks under one cluster.  
+
+---
+
+## Alternatives to Kubernetes
+- Docker Swarm  
+- Apache Mesos  
+- OpenShift  
+- Nomad  
+
+
 
 
 
