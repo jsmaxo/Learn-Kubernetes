@@ -59,4 +59,4 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 ```
 Use the copied token from the previous step to log in.
 
-![Kubernetes Dashboard](../../Images/dashboard.png)
+![Kubernetes Dashboard](../Images/dashboard.png)
