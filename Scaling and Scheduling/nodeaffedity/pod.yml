@@ -5,8 +5,8 @@ metadata:
   namespace: apache
 spec:
   affinity:
-    nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
+    nodeAffinity: #  node affinity is a set of rules used by the scheduler to determine where a pod can be scheduled based on the labels of the nodes in the cluster.
+      requiredDuringSchedulingIgnoredDuringExecution: # This means that the rules specified in this section must be met for the pod to be scheduled on a node, but if the rules are not met after the pod has been scheduled, it will not be evicted from the node.
         nodeSelectorTerms:
         - matchExpressions:
           - key: disktype

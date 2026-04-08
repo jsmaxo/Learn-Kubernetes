@@ -27,4 +27,4 @@ spec:
       volumes:
         - name: my-volume
           persistentVolumeClaim:
-             claimName: local-pvc
+             claimName: local-pvc #In Kubernetes, the name you use in volumeMounts must be exactly the same as the name defined in volumes.
